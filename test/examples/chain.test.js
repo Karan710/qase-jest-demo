@@ -5,7 +5,7 @@ describe("Example: chain.test.js", () => {
   test("Maintain your test meta-data from code", async () => {
     qase
       .title("Use qase annotation in a chain")
-      qase.fields({
+      ?.fields({
         severity: "high",
         priority: "medium",
         layer: "api",
