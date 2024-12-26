@@ -5,11 +5,11 @@ const testCases = [
   { browser: "Firefox", username: "@bob", password: "456" },
   { browser: "Webkit", username: "@charlie", password: "789" },
 ];
-
+console.log('QASE',qase)
 describe("Example param.test.js\tSingle Parameter", => {
   testCases.forEach(({ browser }) => {
-    test(`Test login with ${browser}`, async() => {
-      await qase.title("Verify if login page loads successfully");
+    test(`Test login with ${browser}`, () => {
+      qase.title("Verify if login page loads successfully");
 
       /*
        * Instead of creating three separate test cases in Qase, this method will add a 'browser' parameter, with three values.
@@ -24,8 +24,8 @@ describe("Example param.test.js\tSingle Parameter", => {
 
 describe("Example param.test.js\tGroup Parameter", () => {
   testCases.forEach(({ username, password }) => {
-    test(`Test login with ${username} using qase.groupParameters`, async() => {
-     await qase.title("Verify if user is able to login with their username.");
+    test(`Test login with ${username} using qase.groupParameters`,() => {
+      qase.title("Verify if user is able to login with their username.");
 
       /*
        * Here, we're grouping the username and password parameters to track them together, as a set of parameters for the test.
