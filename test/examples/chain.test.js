@@ -9,7 +9,9 @@ describe("Example: chain.test.js", () => {
         severity: "high",
         priority: "medium",
         layer: "api",
-        description: "Code it quick, fix it slow",
+        description: `Code it quick, fix it slow,
+                    Tech debt grows where shortcuts go,
+                    Refactor later? Ha! We know.`,
       })
       ?.attach({ paths: "./test/examples/attachments/test-file.txt" })
       ?.comment(
