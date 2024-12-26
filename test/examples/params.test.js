@@ -8,7 +8,7 @@ const testCases = [
 
 describe("Example param.test.js\tSingle Parameter", () => {
   testCases.forEach(({ browser }) => {
-    test(`Test login with ${browser}`, () => {
+    test(`Test login with ${browser}`, async () => {
       qase?.title("Verify if login page loads successfully");
 
       /*
@@ -17,14 +17,16 @@ describe("Example param.test.js\tSingle Parameter", () => {
 
       qase.parameters({ Browser: browser });
 
-      expect(true).toBe(true);
+      // Simulating asynchronous behavior
+      const isPageLoaded = await new Promise((resolve) => setTimeout(() => resolve(true), 100));
+      expect(isPageLoaded).toBe(true);
     });
   });
 });
 
 describe("Example param.test.js\tGroup Parameter", () => {
   testCases.forEach(({ username, password }) => {
-    test(`Test login with ${username} using qase.groupParameters`, () => {
+    test(`Test login with ${username} using qase.groupParameters`, async () => {
       qase.title("Verify if user is able to login with their username.");
 
       /*
@@ -37,7 +39,9 @@ describe("Example param.test.js\tGroup Parameter", () => {
         Password: password,
       });
 
-      expect(true).toBe(true);
+      // Simulating asynchronous behavior
+      const isLoginSuccessful = await new Promise((resolve) => setTimeout(() => resolve(true), 100));
+      expect(isLoginSuccessful).toBe(true);
     });
   });
 });
