@@ -1,4 +1,4 @@
-const { qase } = require("jest-qase-reporter/jest");
+import {qase} from "jest-qase-reporter/jest";
 
 const testCases = [
   { browser: "Chromium", username: "@alice", password: "123" },
