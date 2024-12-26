@@ -5,7 +5,8 @@ const testCases = [
   { browser: "Firefox", username: "@bob", password: "456" },
   { browser: "Webkit", username: "@charlie", password: "789" },
 ];
-console.log('QASE',qase.title)
+console.log("Qase Reporter Loaded:", qase ? "Yes" : "No");
+
 describe("Example param.test.js\tSingle Parameter", () => {
   testCases.forEach(({ browser }) => {
     test(`Test login with ${browser}`, () => {
