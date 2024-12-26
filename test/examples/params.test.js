@@ -6,7 +6,7 @@ const testCases = [
   { browser: "Webkit", username: "@charlie", password: "789" },
 ];
 console.log('QASE',qase)
-describe("Example param.test.js\tSingle Parameter", => {
+describe("Example param.test.js\tSingle Parameter", () => {
   testCases.forEach(({ browser }) => {
     test(`Test login with ${browser}`, () => {
       qase.title("Verify if login page loads successfully");
